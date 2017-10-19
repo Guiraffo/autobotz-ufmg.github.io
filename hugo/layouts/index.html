@@ -21,7 +21,9 @@
           <div >
             <h2><a href="{{ .RelPermalink }}" class="title-post">{{ .Title }}</a></h2>
             {{ .Summary }}
-            <img style="margin-top:10px"src="images/mostra.jpg">
+            {{ if isset .Params "image" }}
+            <img style="margin-top:10px"src="{{ .Params.image }} ">
+            {{ end }}
           </div>
           {{ if .Truncated }}
           <!-- This <div> includes a read more link, but only if the summary is truncated... -->
