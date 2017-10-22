@@ -66,8 +66,9 @@ image: /images/your-image-name.jpg
 ---
 ```
 
-Then, add it in your text using markdown language:
-![your-image](/images/your-image-name.jpg)
+Then, simply add it in your text using markdown language.
+
+### Check your post
 
 If you want to check how your post is going, type:
 
@@ -75,11 +76,15 @@ If you want to check how your post is going, type:
 hugo server -D
 ```
 
+Access the site [http://localhost:1313/](http://localhost:1313/) to check your changes.
+
 Once you're happy with your changes make them real.
 
 ```
 hugo undraft
 ```
+
+### Upload it to the real world
 
 Go up a directory.
 
