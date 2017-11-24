@@ -116,7 +116,20 @@
 		  <div class="row justify-content-center">
 		  	<div class="col">
 		    <p class="text-post" style="width: 80%">
-		  		
+		  		<p>The 2015 OPEN challenge required us to build an autonomous robot for aquatic environments. Knowing that the applications for robots of that kind are far more embracing than the proposed challenge, the team decided to build a model which was also a generic aquatic environment vehicle.</p>
+
+          <p>The model is based on a Hovercraft design  and was chosen considering that it doesn’t need any kind of extra power for its balance on water given that the buoyancy force can provide it.</p>
+
+          <p>The support base of our robot was built using PVC tubes held together by aluminum bars. During its construction, the team took care to make the tubes waterproof. We built the brackets using a 3D printer and the material used was the ABS polymer. We used brushless motors and plastic fans taken from pc’s coolers to create our propulsion system. We also managed to build the vertical rods and the connection tubes with steel and the ‘ andares” electronics and manipulator, with fiberglass.</p>
+
+          <p>Autoboat’s electronic design includes its microcontrollers, sensors, driver circuits, actuators (motors) and embedded computer. The latter is connected to a camera and runs the robot’s entire high-level software, such as image processing and path planning. Commands sent by the computer are read by one of the two Arduino Unos used as the robot’s microcontrollers. The Arduinos exchange information with each other using the I²C communication protocol.</p>
+
+          <p>The microcontrollers act by interpreting the commands sent by the computer and converting them into electrical signals for the robot’s circuits, and also by sending back the information provided by the sensors in order to use it in the navigation software. Some of these sensors are: four sonars used to measure the distance to the obstacles, one inertial measurement unit (IMU) to measure the boat’s orientation in space, and one infrared presence sensor in the gripper to detect objects inside it. The motor driver circuits are commanded by the Arduinos and consist of one H-bridge to drive the gripper’s DC motor, two stepper motor drivers for the manipulator (one for the rotation and the other for the extension/retraction movement) and two ESCs (Electronic Speed Control) to drive the propellers’ brushless DC motors. Additionally, two servomotors are used to set the propellers’ angular position.</p>
+
+          <p>The boat is powered by a 12 V lithium polymer (LiPo) battery, which is connected to a monitoring and protection circuit. This circuit, in addition to inform the remaining charge level, also protects the battery against serious damage (caused, for example, by overcurrent or charge unbalance between the cells). While part of the electronics is powered directly by this voltage, some of it requires 5 V to operate. Therefore, a voltage regulator circuit is used to convert the battery’s twelve volts into five, so as to be used by such components.</p>
+
+          <p>Autoboat needs to leave his initital position, identify objects in one platform, move towards their position, grab them and bring them back to another platform. To do this, he is equipped with a camara for image aquisition and further processing. We use an algorithm to identify the target blocks and unwanted blocks by their color, and we get a distance estimation using their size on the image, and also ultrassonic sensors, that provide us a more accurate measure. Once we have this data, we can control the brushless motors angles to move the boat towards the platform we want, in order to grab the blocks. When we get there, we extend our robotic arm and close our grip to grab the block; we only retract our arm when we know we actually grabbed a block, by using infrared sensors on the far end of our grip. If we interrupt the continuous optical flux between the sensors, we know something is between the grip (hopefully the blocks we want!). We can then go back to the initial platform once again controlling our brushless motors direction. That's it, mission accomplished !</p>
+          <br><br>
 		  	</p>
 		  	</div>
 		  </div>
